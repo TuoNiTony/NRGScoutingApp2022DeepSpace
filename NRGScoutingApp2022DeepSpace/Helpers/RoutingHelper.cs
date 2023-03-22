@@ -21,12 +21,15 @@ namespace NRGScoutingApp2022DeepSpace.Helpers
             {
                 builder.Services
                     .AddSingleton<MatchEntryDatabase>()
+                    .AddSingleton<PitScoutDatabase>()
                     .AddTransient<AllMatchEntriesPage>()
                     .AddTransient<MatchEntryDetailPage>()
                     .AddTransient<TeamSelectorPage>()
                     .AddTransient<Views.MatchEntryViews.MatchTimerPage>()
                     .AddTransient<Views.MatchEntryViews.MatchEventsPage>()
-                    .AddTransient<Views.MatchEntryViews.MatchInfoPage>();
+                    .AddTransient<Views.MatchEntryViews.MatchInfoPage>()
+                    .AddTransient<Views.PitScoutViews.AllPitScoutEntriesPage>()
+                    .AddTransient<Views.PitScoutViews.PitScoutPage>();
             }
         }
     }

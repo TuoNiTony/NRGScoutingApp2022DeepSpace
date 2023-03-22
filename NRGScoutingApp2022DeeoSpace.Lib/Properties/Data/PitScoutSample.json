@@ -1,0 +1,72 @@
+﻿[
+  {
+    "team": "948",
+    "teamName": "NRG",
+    "questions": [
+      {
+        "questionNum": 1,
+        "question": "948"
+      },
+      {
+        "questionNum": 2,
+        "question": "NRG"
+      },
+      {
+        "questionNum": 3,
+        "question": "10x10"
+      },
+      {
+        "questionNum": 4,
+        "question": "125IB"
+      },
+      {
+        "questionNum": 5,
+        "question": "1yr"
+      },
+      {
+        "questionNum": 6,
+        "question": "Anything else you would like us to know about you?"
+      },
+      {
+        "questionNum": 7,
+        "question": "Prefered Level? (High/Mid/Low)"
+      },
+      {
+        "questionNum": 8,
+        "question": "Prefered Game Object? (Cone/Cube)"
+      },
+      {
+        "questionNum": 9,
+        "question": "Intake Style? (Ground/Shelf)"
+      },
+      {
+        "questionNum": 10,
+        "question": "Prefered Substation? (Single/Double)"
+      },
+      {
+        "questionNum": 11,
+        "question": "Robot Mechanisms?"
+      },
+      {
+        "questionNum": 12,
+        "question": "Approximated Successful Cycle Time?"
+      },
+      {
+        "questionNum": 13,
+        "question": "Autonomous Capabilities (Ex. Auto Paths)"
+      },
+      {
+        "questionNum": 14,
+        "question": "Drive Train"
+      },
+      {
+        "questionNum": 15,
+        "question": "Vision Tracking and a Brief Explanation of how it work"
+      },
+      {
+        "questionNum": 16,
+        "question": "Extra Comments?"
+      }
+    ]
+  }
+]

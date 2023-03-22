@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NRGScoutingApp2022DeepSpace.Views.PitScoutViews.AllPitScoutEntriesPage"
+             Title="Pit Scout Entries">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="Add_Clicked" IconImageSource="{StaticResource ToolbarAdd}" />
+        <ToolbarItem Text="Delete All..." Clicked="DeleteAll_Clicked" IconImageSource="{StaticResource ToolbarTrash}" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView Margin="10">
+        <CollectionView x:Name="pitScoutCollection"
+                        Margin="20"
+                        SelectionMode="Single"
+                        SelectionChanged="pitScoutCollection_SelectionChanged">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding MatchNum, StringFormat='Match-{0}'}" FontSize="22"/>
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding TeamName}" FontSize="14" TextColor="Gray"/>
+                            <Label Text="{Binding Side, StringFormat=' - {0}'}" FontSize="14" TextColor="Gray"/>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+</ContentPage>

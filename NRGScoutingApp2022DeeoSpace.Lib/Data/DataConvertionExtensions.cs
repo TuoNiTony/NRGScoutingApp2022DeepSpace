@@ -43,5 +43,38 @@ namespace NRGScoutingApp2022DeeoSpace.Lib.Data
 
             return result;
         }
+
+        public static PitScoutEntry? ToPitScoutEntry(this PitScoutEntity entity)
+        {
+            PitScoutEntry? entry = null;
+
+            if (entity != null && string.IsNullOrEmpty(entity.Data) == false)
+            {
+                entry = JsonHelper.Deserialize<PitScoutEntry>(entity.Data);
+
+                if (entry != null)
+                    entry.Id = entity.Id;
+            }
+
+            return entry;
+        }
+
+        public static List<PitScoutEntry> ToPitScoutEntries(this List<PitScoutEntity> entities)
+        {
+            List<PitScoutEntry> result = new List<PitScoutEntry>();
+
+            if (entities != null)
+            {
+                foreach (PitScoutEntity entity in entities)
+                {
+                    PitScoutEntry? entry = entity.ToPitScoutEntry();
+
+                    if (entry != null)
+                        result.Add(entry);
+                }
+            }
+
+            return result;
+        }
     }
 }

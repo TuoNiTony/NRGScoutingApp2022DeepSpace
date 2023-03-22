@@ -68,5 +68,12 @@ namespace NRGScoutingApp2022DeepSpace.Properties {
                 return ResourceManager.GetString("MatchEntrySaved", resourceCulture);
             }
         }
+        internal static string PitScoutEntrySaved
+        {
+            get
+            {
+                return ResourceManager.GetString("PitScoutEntrySaved", resourceCulture);
+            }
+        }
     }
 }

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<local:PitScoutBasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NRGScoutingApp2022DeepSpace.Views.PitScoutViews.PitScoutPage"
+             xmlns:local="clr-namespace:NRGScoutingApp2022DeepSpace.Views.PitScoutViews"
              Title="Pit Scout Page">
+    <local:PitScoutBasePage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" IconImageSource="{StaticResource ToolbarSave}" />
+        <ToolbarItem Text="Back" Clicked="OnBackToMainPage" IconImageSource="{StaticResource ToolbarBack}" />
+    </local:PitScoutBasePage.ToolbarItems>
+
+
     <VerticalStackLayout>
         <Label 
-            Text="Pit Scout Page"
+            Text="PitScout"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
-</ContentPage>
+</local:PitScoutBasePage>

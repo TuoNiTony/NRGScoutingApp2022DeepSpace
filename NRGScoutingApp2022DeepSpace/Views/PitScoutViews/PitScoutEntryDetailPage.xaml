@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NRGScoutingApp2022DeepSpace.Views.MatchEntryDetailPage"
+             Title="Pit Scout Entry Detail">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Back" Clicked="Back_Clicked" IconImageSource="{StaticResource ToolbarBack}" />
+        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" IconImageSource="{StaticResource ToolbarTrash}" />
+    </ContentPage.ToolbarItems>
+    <ScrollView Margin="10">
+        <VerticalStackLayout>
+            <Label 
+                x:Name="pitScoutData"
+                Text="No content"
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

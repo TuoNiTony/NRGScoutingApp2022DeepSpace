@@ -25,6 +25,18 @@ namespace NRGScoutingApp2022DeeoSpace.Lib.Data
             return await Task.FromResult(database);
         }
 
+        public async static Task<PitScoutDatabase> PSInitTeamsFromResourceAsync(this PitScoutDatabase database)
+        {
+            List<Team>? teams = JsonHelper.LoadEmbededData<List<Team>>("Teams");
+
+            await database.Connection.DeleteAllAsync<Team>();
+
+            if (teams != null)
+                await database.Connection.InsertAllAsync(teams);
+
+            return await Task.FromResult(database);
+        }
+
         public async static Task<MatchEntryDatabase> InitEntriesFromResourceAsync(this MatchEntryDatabase database)
         {
             List<MatchEntry>? entries = JsonHelper.LoadEmbededData<List<MatchEntry>>("MatchEntrySample");
@@ -36,6 +48,19 @@ namespace NRGScoutingApp2022DeeoSpace.Lib.Data
 
             return database;
         }
+
+        public async static Task<PitScoutDatabase> PSInitEntriesFromResourceAsync(this PitScoutDatabase database)
+        {
+            List<PitScoutEntry>? entries = JsonHelper.LoadEmbededData<List<PitScoutEntry>>("PitScoutSample");
+
+            await database.Connection.DeleteAllAsync<PitScoutEntity>();
+
+            if (entries != null)
+                await database.Connection.InsertAllAsync(entries.ConvertAll(entry => new PitScoutEntity(entry)));
+
+            return database;
+        }
+
 
         private static string LoadStringFromResource(string path)
         {
